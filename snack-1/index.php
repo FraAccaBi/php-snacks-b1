@@ -4,12 +4,22 @@ Olimpia Milano - Cantù | 55-60
  -->
 <?php
 $Grottammare = [
-    'Ascoli',
-    'SBT',
-     2,
-     3,
+    [
+        'squadra1' => 'Ascoli',
+        'squadra2' => 'SBT',
+        'punteggio1' => 2,
+        'punteggio2' => 3
+    ],
+    [
+        'squadra1' => 'Inter',
+        'squadra2' => 'Juve',
+        'punteggio1' => 2,
+        'punteggio2' => 3
+    ]
 ];
 
+//var_dump($element);
+//var_dump($Grottammare['squadra1']);
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +33,15 @@ $Grottammare = [
 <body>
     
 <?php 
-    $element = '';
-    for ($i=0; $i < 4; $i++) { 
-    $element .= ($Grottammare[$i]) . ' ';
-    //var_dump($element);
-    //echo $element . ' ';
-}
-    echo $element;
-?>    
+    for ($i=0; $i < 2; $i++) { ?>
+    
+    <p>
+        <?php  
+            echo $Grottammare[$i]['squadra1'] . ' - ' . $Grottammare[$i]['squadra2'] . ' | ' . $Grottammare[$i]['punteggio1'] . ' - ' . $Grottammare[$i]['punteggio2']; 
+        ?>  
+    </p>
+    
+<?php } ?>    
     
 </body>
 </html>
