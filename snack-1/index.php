@@ -22,12 +22,14 @@ $Grottammare = [
 </head>
 <body>
     
-<?php for ($i=0; $i < 4; $i++) { 
-    $element = ($Grottammare[$i]);
+<?php 
+    $element = '';
+    for ($i=0; $i < 4; $i++) { 
+    $element .= ($Grottammare[$i]) . ' ';
     //var_dump($element);
-    echo $element . ' ';
+    //echo $element . ' ';
 }
-
+    echo $element;
 ?>    
     
 </body>
