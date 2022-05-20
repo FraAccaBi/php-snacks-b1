@@ -24,8 +24,10 @@ $Grottammare = [
     
 <?php for ($i=0; $i < 4; $i++) { 
     $element = ($Grottammare[$i]);
-    var_dump($element);
+    //var_dump($element);
+    echo $element . ' ';
 }
+
 ?>    
     
 </body>
