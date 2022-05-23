@@ -21,9 +21,9 @@ $paragraphs = explode('.', $paragraph);
     <title>Document</title>
 </head>
 <body>
-    <?php foreach ($paragraphs as $paragraphs => $paragraph) : ?>
+    <?php foreach ($paragraphs as $paragraph) : ?>
     <p>
-    <?php echo $paragraph ?>
+    <?php echo $paragraph ?>.
     </p>
     <?php endforeach ?>
     
