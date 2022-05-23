@@ -7,47 +7,53 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z
 
  <?php
 
-$posts = [
+$data = [
 
     '10/01/2019' => [
         [
             'title' => 'Post 1',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 1'
+            'text' => 'Testo post 1',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ],
         [
             'title' => 'Post 2',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 2'
+            'text' => 'Testo post 2',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ],
     ],
     '10/02/2019' => [
         [
             'title' => 'Post 3',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 3'
+            'text' => 'Testo post 3',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ]
     ],
     '15/05/2019' => [
         [
             'title' => 'Post 4',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 4'
+            'text' => 'Testo post 4',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ],
         [
             'title' => 'Post 5',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 5'
+            'text' => 'Testo post 5',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ],
         [
             'title' => 'Post 6',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 6'
+            'text' => 'Testo post 6',
+            'img' => "<img src='https://picsum.photos/400/200' alt='' />"
         ]
     ],
 ];
 
-var_dump($posts)
+//var_dump($posts)
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +68,23 @@ var_dump($posts)
 <ul>
     <?php 
 
-    foreach($posts as $key => $value) : ?>
-    <li>
-        <?= $key ?> : <?= $value ?>
-    </li>
-    <?php endforeach ?>
+    foreach($data as $date => $posts) : ?>
+        <li>
+            <h2> <?php echo $date ?> </h2> 
+            
+            <?php foreach($posts as $post) : ?>
+                <?= $post['img'] ?>
+                <?= $post['title'] ?>                
+                <?= $post['author'] ?>
+                <?= $post['text'] ?>
+                
+
+
+            <?php endforeach ?>
+
+        </li>
+        
+        <?php endforeach ?>
 
 </ul>   
 
